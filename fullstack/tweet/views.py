@@ -3,6 +3,7 @@ from .models import Tweet
 from .forms import TweetForm
 from django.shortcuts import get_object_or_404, redirect
 
+# Full stack django project tutorials watched 1 hour 25 mint
 
 # Create your views here.
 def index(request):

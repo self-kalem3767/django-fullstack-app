@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}Chai aur Django Full Stack tweet App{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4">Welcom to Chai's fullstack Project</h1>
+<h2>
+    {%if form.instance.pk %}
+    Edit Tweet
+    {% else %}
+    Create tweet
+    {% endif %}
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-warning" type="submit">Submit</button>
+    </form>
+    <a href="{% url "tweet_list" %}">Back to Home Page</a>
+</h2>
+{% endblock %}
